@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { MarketProvider } from './context/MarketContext';
 import { ThemeProvider } from './context/ThemeContext';
@@ -18,7 +18,7 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <MarketProvider>
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route
@@ -39,7 +39,7 @@ function App() {
                 }
               />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </MarketProvider>
       </AuthProvider>
     </ThemeProvider>
@@ -47,3 +47,4 @@ function App() {
 }
 
 export default App;
+
