@@ -1,0 +1,223 @@
+.trade-setup {
+    padding: var(--spacing-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+.trade-setup__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.trade-setup__title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.trade-setup__badge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-md);
+}
+
+.trade-setup__badge--long {
+    color: var(--color-bullish);
+    background: var(--color-bullish-bg);
+}
+
+.trade-setup__badge--short {
+    color: var(--color-bearish);
+    background: var(--color-bearish-bg);
+}
+
+/* No Setup State */
+.trade-setup__empty {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--color-text-muted);
+}
+
+.trade-setup__empty-icon {
+    font-size: 32px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.trade-setup__empty-text {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.trade-setup__empty-suggestion {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Probability Ring */
+.trade-setup__probability {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.trade-setup__probability-ring {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.trade-setup__probability-svg {
+    transform: rotate(-90deg);
+}
+
+.trade-setup__probability-bg {
+    fill: none;
+    stroke: var(--color-bg-tertiary);
+    stroke-width: 6;
+}
+
+.trade-setup__probability-fill {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.trade-setup__probability-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.trade-setup__probability-info {
+    flex: 1;
+}
+
+.trade-setup__probability-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+
+.trade-setup__quality {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.trade-setup__quality-badge {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.trade-setup__quality-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+/* Levels Grid */
+.trade-setup__levels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.trade-setup__level {
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.trade-setup__level-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+
+.trade-setup__level-value {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-mono);
+}
+
+.trade-setup__level-value--entry {
+    color: var(--color-accent);
+}
+
+.trade-setup__level-value--stop {
+    color: var(--color-bearish);
+}
+
+.trade-setup__level-value--target {
+    color: var(--color-bullish);
+}
+
+/* Risk/Reward */
+.trade-setup__rr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.trade-setup__rr-value {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-bullish);
+}
+
+/* Reasons */
+.trade-setup__reasons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.trade-setup__reason {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.trade-setup__reason-icon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* Warning */
+.trade-setup__warning {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    text-align: center;
+}

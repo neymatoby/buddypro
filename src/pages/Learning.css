@@ -1,0 +1,234 @@
+.learning-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.learning-page__header {
+    text-align: center;
+}
+
+.learning-page__title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.learning-page__subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-xs);
+}
+
+/* Streak Card */
+.learning-page__streak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, var(--color-accent-glow), var(--color-bg-card));
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-2xl);
+}
+
+.learning-page__streak-item {
+    text-align: center;
+}
+
+.learning-page__streak-value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+}
+
+.learning-page__streak-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.learning-page__streak-message {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+/* Today's Prompt */
+.learning-page__prompt {
+    padding: var(--spacing-xl);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+.learning-page__prompt-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+}
+
+.learning-page__prompt-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-lg);
+}
+
+.learning-page__textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    resize: vertical;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.learning-page__textarea:focus {
+    border-color: var(--color-accent);
+}
+
+.learning-page__textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.learning-page__prompt-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.learning-page__submit-btn {
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: white;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.learning-page__submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.learning-page__submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Completed State */
+.learning-page__completed {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bullish-bg);
+    border: 1px solid var(--color-bullish);
+    border-radius: var(--radius-xl);
+}
+
+.learning-page__completed-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+.learning-page__completed-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-bullish);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Today's Tip */
+.learning-page__tip {
+    padding: var(--spacing-lg);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+.learning-page__tip-category {
+    font-size: var(--font-size-xs);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.learning-page__tip-text {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+}
+
+.learning-page__tip-explanation {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Journal History */
+.learning-page__history {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.learning-page__history-header {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.learning-page__history-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.learning-page__history-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.learning-page__entry {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.learning-page__entry:last-child {
+    border-bottom: none;
+}
+
+.learning-page__entry-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.learning-page__entry-prompt {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+}
+
+.learning-page__entry-content {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}

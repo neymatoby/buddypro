@@ -1,0 +1,182 @@
+.history-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.history-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.history-page__title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.history-page__tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.history-page__tab {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.history-page__tab:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-border-hover);
+}
+
+.history-page__tab--active {
+    color: var(--color-accent);
+    background: var(--color-accent-glow);
+    border-color: var(--color-accent);
+}
+
+.history-page__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.history-page__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.history-page__item:hover {
+    border-color: var(--color-border-hover);
+    transform: translateX(4px);
+}
+
+.history-page__item-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.history-page__item-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-lg);
+}
+
+.history-page__item-icon--bullish {
+    background: var(--color-bullish-bg);
+    color: var(--color-bullish);
+}
+
+.history-page__item-icon--bearish {
+    background: var(--color-bearish-bg);
+    color: var(--color-bearish);
+}
+
+.history-page__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.history-page__item-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.history-page__item-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.history-page__item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-xs);
+}
+
+.history-page__item-time {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.history-page__item-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-md);
+}
+
+.history-page__item-badge--buy {
+    color: var(--color-bullish);
+    background: var(--color-bullish-bg);
+}
+
+.history-page__item-badge--sell {
+    color: var(--color-bearish);
+    background: var(--color-bearish-bg);
+}
+
+.history-page__item-badge--neutral {
+    color: var(--color-neutral);
+    background: var(--color-neutral-bg);
+}
+
+.history-page__empty {
+    text-align: center;
+    padding: var(--spacing-3xl);
+    background: var(--color-bg-card);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+.history-page__empty-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+.history-page__empty-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
+.history-page__clear-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-bearish);
+    background: var(--color-bearish-bg);
+    border: 1px solid var(--color-bearish);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.history-page__clear-btn:hover {
+    background: var(--color-bearish);
+    color: white;
+}

@@ -1,0 +1,135 @@
+.session-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+}
+
+.session-indicator__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.session-indicator__title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.session-indicator__time {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+/* Status Card */
+.session-indicator__status {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+}
+
+.session-indicator__status-icon {
+    font-size: 24px;
+}
+
+.session-indicator__status-content {
+    flex: 1;
+}
+
+.session-indicator__status-title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.session-indicator__status-message {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+/* Quality Stars */
+.session-indicator__quality {
+    display: flex;
+    gap: 2px;
+}
+
+.session-indicator__star {
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.session-indicator__star--active {
+    color: #fbbf24;
+}
+
+/* Active Sessions */
+.session-indicator__sessions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.session-indicator__session {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-primary);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+.session-indicator__session-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-bullish);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Suggestion */
+.session-indicator__suggestion {
+    font-size: var(--font-size-xs);
+    color: var(--color-accent);
+    padding: var(--spacing-sm);
+    background: var(--color-accent-glow);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-accent);
+}
+
+/* Best Pairs */
+.session-indicator__pairs {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.session-indicator__pair {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    padding: 2px var(--spacing-xs);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+}
