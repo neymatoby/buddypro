@@ -3,7 +3,7 @@ import { API_CONFIG, STORAGE_KEYS } from '../utils/constants';
 const { GEMINI } = API_CONFIG;
 
 // API Key management
-const API_KEY_STORAGE = 'forexpro_gemini_key';
+const API_KEY_STORAGE = 'buddypro_gemini_key';
 
 export const getApiKey = () => {
     try {
@@ -181,7 +181,7 @@ export const sendMessage = async (message, context = {}) => {
                     body: JSON.stringify({
                         contents: [{
                             parts: [{
-                                text: `You are ForexPro AI, a helpful forex trading assistant. Answer the following question about forex trading concisely and accurately. If asked about specific trades, always emphasize risk management and that this is educational information only, not financial advice.\n\nQuestion: ${message}`,
+                                text: `You are BuddyPro AI, a helpful forex trading assistant. Answer the following question about forex trading concisely and accurately. If asked about specific trades, always emphasize risk management and that this is educational information only, not financial advice.\n\nQuestion: ${message}`,
                             }],
                         }],
                         generationConfig: {

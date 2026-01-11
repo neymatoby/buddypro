@@ -47,8 +47,8 @@ const Login = () => {
         <div className="login-page">
             <div className="login-page__container">
                 <div className="login-page__header">
-                    <img src="/favicon.svg" alt="ForexPro" className="login-page__logo" />
-                    <h1 className="login-page__title">ForexPro Trading</h1>
+                    <img src="/favicon.svg" alt="BuddyPro" className="login-page__logo" />
+                    <h1 className="login-page__title">BuddyPro Trading</h1>
                     <p className="login-page__subtitle">
                         Professional Forex Analysis with AI
                     </p>

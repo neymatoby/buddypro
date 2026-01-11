@@ -44,9 +44,9 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header__brand">
-                <img src="/favicon.svg" alt="ForexPro" className="header__logo" />
+                <img src="/favicon.svg" alt="BuddyPro" className="header__logo" />
                 <div>
-                    <h1 className="header__title">ForexPro</h1>
+                    <h1 className="header__title">BuddyPro</h1>
                     <span className="header__subtitle">Trading Analysis</span>
                 </div>
             </div>

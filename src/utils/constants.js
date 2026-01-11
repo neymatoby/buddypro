@@ -76,12 +76,12 @@ export const API_CONFIG = {
 
 // Storage keys
 export const STORAGE_KEYS = {
-    USER: 'forexpro_user',
-    WATCHLIST: 'forexpro_watchlist',
-    HISTORY: 'forexpro_history',
-    SIGNALS: 'forexpro_signals',
-    THEME: 'forexpro_theme',
-    SETTINGS: 'forexpro_settings',
+    USER: 'buddypro_user',
+    WATCHLIST: 'buddypro_watchlist',
+    HISTORY: 'buddypro_history',
+    SIGNALS: 'buddypro_signals',
+    THEME: 'buddypro_theme',
+    SETTINGS: 'buddypro_settings',
 };
 
 // Chart colors

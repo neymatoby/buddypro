@@ -32,7 +32,7 @@ const ChatInterface = () => {
     const [messages, setMessages] = useState([
         {
             role: 'assistant',
-            content: "👋 Hello! I'm your ForexPro AI assistant. I can help you understand forex trading, explain technical indicators, and answer your trading questions.\n\nWhat would you like to know?",
+            content: "👋 Hello! I'm your BuddyPro AI assistant. I can help you understand forex trading, explain technical indicators, and answer your trading questions.\n\nWhat would you like to know?",
             timestamp: new Date().toISOString(),
         }
     ]);
@@ -109,7 +109,7 @@ const ChatInterface = () => {
             <div className="chat-interface__header">
                 <div className="chat-interface__title">
                     <span className="chat-interface__title-icon">🤖</span>
-                    <span>ForexPro AI Assistant</span>
+                    <span>BuddyPro AI Assistant</span>
                 </div>
                 <div className="chat-interface__status">
                     <span className="chat-interface__status-dot" />

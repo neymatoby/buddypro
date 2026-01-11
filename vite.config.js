@@ -4,16 +4,16 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/forexpro/',
+  base: '/buddypro/',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'ForexPro Trading',
-        short_name: 'ForexPro',
-        description: 'Professional Forex Trading Analysis & AI Assistant',
+        name: 'BuddyPro Trading',
+        short_name: 'BuddyPro',
+        description: 'Your Smart Forex Trading Buddy with AI-Powered Analysis',
         theme_color: '#0f172a',
         background_color: '#0f172a',
         display: 'standalone',
