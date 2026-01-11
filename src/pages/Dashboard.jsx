@@ -7,6 +7,7 @@ import PriceCard from '../components/charts/PriceCard';
 import SignalCard from '../components/analysis/SignalCard';
 import SessionIndicator from '../components/analysis/SessionIndicator';
 import TradeSetupCard from '../components/analysis/TradeSetupCard';
+import TradingSimulator from '../components/trading/TradingSimulator';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -131,6 +132,9 @@ const Dashboard = () => {
                 </div>
 
                 <div className="dashboard__sidebar">
+                    {/* Quick Trade Simulator */}
+                    <TradingSimulator />
+
                     {/* Session Indicator - West Africa Focus */}
                     <SessionIndicator />
 

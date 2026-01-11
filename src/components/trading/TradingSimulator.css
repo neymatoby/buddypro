@@ -1,0 +1,294 @@
+.trading-simulator {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.trading-simulator__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trading-simulator__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.trading-simulator__prob {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-bullish-transparent);
+    color: var(--color-bullish);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+}
+
+/* Trade Buttons */
+.trading-simulator__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.trading-simulator__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.trading-simulator__btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.trading-simulator__btn:hover::before {
+    left: 100%;
+}
+
+.trading-simulator__btn--buy {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.trading-simulator__btn--buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+}
+
+.trading-simulator__btn--sell {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.trading-simulator__btn--sell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+.trading-simulator__btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.trading-simulator__btn-icon {
+    font-size: 1.5rem;
+}
+
+.trading-simulator__btn-label {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+/* Active Trade Display */
+.trading-simulator__trade {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+}
+
+.trading-simulator__trade--buy {
+    border-left-color: var(--color-bullish);
+}
+
+.trading-simulator__trade--sell {
+    border-left-color: var(--color-bearish);
+}
+
+.trading-simulator__trade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.trading-simulator__direction {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.trading-simulator__status {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.trading-simulator__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.trading-simulator__price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.trading-simulator__current-price {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: var(--font-mono);
+}
+
+.trading-simulator__tp {
+    color: var(--color-bullish);
+}
+
+.trading-simulator__sl {
+    color: var(--color-bearish);
+}
+
+/* Progress bar */
+.trading-simulator__progress {
+    margin-top: 0.75rem;
+    height: 4px;
+    background: var(--bg-tertiary);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.trading-simulator__progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    animation: progress 5s linear forwards;
+    border-radius: 2px;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Result */
+.trading-simulator__result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-top: 0.75rem;
+    border-radius: var(--radius-md);
+    animation: resultPopIn 0.3s ease-out;
+}
+
+@keyframes resultPopIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.trading-simulator__result--win {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(22, 163, 74, 0.1));
+    border: 1px solid var(--color-bullish);
+}
+
+.trading-simulator__result--loss {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.1));
+    border: 1px solid var(--color-bearish);
+}
+
+.trading-simulator__result-icon {
+    font-size: 1.5rem;
+}
+
+.trading-simulator__result-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.trading-simulator__result--win .trading-simulator__result-text {
+    color: var(--color-bullish);
+}
+
+.trading-simulator__result--loss .trading-simulator__result-text {
+    color: var(--color-bearish);
+}
+
+.trading-simulator__result-pips {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Stats */
+.trading-simulator__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.trading-simulator__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.trading-simulator__stat-value {
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-mono);
+}
+
+.trading-simulator__stat-label {
+    font-size: 0.65rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
