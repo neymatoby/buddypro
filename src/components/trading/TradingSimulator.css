@@ -292,3 +292,54 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .trading-simulator {
+        padding: 0.75rem;
+    }
+
+    .trading-simulator__actions {
+        gap: 0.5rem;
+    }
+
+    .trading-simulator__btn {
+        padding: 0.75rem;
+    }
+
+    .trading-simulator__btn-icon {
+        font-size: 1.25rem;
+    }
+
+    .trading-simulator__btn-label {
+        font-size: 0.85rem;
+    }
+
+    .trading-simulator__trade {
+        padding: 0.75rem;
+    }
+
+    .trading-simulator__price-row {
+        font-size: 0.75rem;
+    }
+
+    .trading-simulator__result {
+        padding: 0.75rem;
+    }
+
+    .trading-simulator__result-icon {
+        font-size: 1.25rem;
+    }
+
+    .trading-simulator__result-text {
+        font-size: 0.95rem;
+    }
+
+    .trading-simulator__stat-value {
+        font-size: 0.9rem;
+    }
+
+    .trading-simulator__stat-label {
+        font-size: 0.6rem;
+    }
+}

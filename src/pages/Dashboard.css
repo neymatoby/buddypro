@@ -135,10 +135,50 @@
     .dashboard__stats {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .dashboard__sidebar {
+        order: -1;
+        /* Move sidebar to top on tablet */
+    }
 }
 
 @media (max-width: 640px) {
+    .dashboard {
+        gap: var(--spacing-md);
+    }
+
+    .dashboard__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard__title {
+        font-size: var(--font-size-xl);
+    }
+
+    .dashboard__subtitle {
+        font-size: var(--font-size-xs);
+    }
+
     .dashboard__stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .dashboard__stat {
+        padding: var(--spacing-md);
+    }
+
+    .dashboard__stat-value {
+        font-size: var(--font-size-xl);
+    }
+
+    .dashboard__section-title {
+        font-size: var(--font-size-base);
+    }
+
+    .dashboard__market-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
 }

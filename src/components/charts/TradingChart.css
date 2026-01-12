@@ -123,10 +123,49 @@
 
 @media (max-width: 768px) {
     .trading-chart {
-        height: 300px;
+        height: 280px;
+        border-radius: var(--radius-lg);
     }
 
     .trading-chart__toolbar {
         flex-wrap: wrap;
+        top: var(--spacing-sm);
+        left: var(--spacing-sm);
+        gap: 0.25rem;
+    }
+
+    .trading-chart__timeframe-btn {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.65rem;
+        min-height: 28px;
+    }
+
+    .trading-chart__info {
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+
+    .trading-chart__price {
+        font-size: var(--font-size-lg);
+    }
+
+    .trading-chart__change {
+        font-size: var(--font-size-xs);
+        padding: 0.2rem 0.4rem;
+    }
+
+    .trading-chart__signal-badge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trading-chart {
+        height: 240px;
+    }
+
+    .trading-chart__price {
+        font-size: var(--font-size-base);
     }
 }
